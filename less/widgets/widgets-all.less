@@ -1,0 +1,1132 @@
+// ------------------------------
+// Mono:  widget-all.less
+// ------------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   #Template Header
+//  2.   #Logo & Company Name
+
+//  4.   #Feature
+//  5.   #Images
+//  6.   #Gallery
+//  7.   #Slideshow
+
+//  8.   #Buttons
+
+//  9.   #Forms
+
+// 10.   #Social Icons
+// 11.   #Twitter Feed
+
+// 12.   #Divider
+// 13.   #Yelp
+// 14.   #Messages
+
+
+
+// -----------------------------
+// 1. #Template Header
+// -----------------------------
+
+.template-header {
+    .flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+    min-height: 80px;
+    background-color: @color__body--background;
+    z-index: 99999;
+    width: 100%;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.bk-pt-default .template-header {
+    position: relative;
+    background-color: @color__body--background;
+}
+
+
+// Header Wrapper
+// --------------
+
+.header-wrapper,
+.footer-wrapper {
+    // Flex parent
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width:100%;
+    // Layout
+    padding: 30px 0;
+
+    @media @tablet {
+        padding: 10px 4% 15px;
+        display: inline-block;
+    }
+
+    @media @mobile {
+        padding: 20px 16% 15px 4%;
+    }
+}
+.footer-wrapper {
+    .justify-content(space-between);
+
+    @media @mobile {
+        display: block;
+    }
+}
+
+.bk-pt-default .template-header {
+    background-color: @color-swatch1;
+}
+
+
+
+// -----------------------------
+// 2. #Logo & Company Name
+// -----------------------------
+
+.widget__logo {
+    margin-right: 10px;
+    @media @tablet {
+        margin-right: 0;
+    }
+}
+
+// Header Logo Flexbox
+.header-logo {
+    // Flex child
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+
+    // Layout
+    text-align: center;
+    max-width: 100%;
+
+    @media @tablet {
+        padding: 10px 0px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    img, .logo {
+        line-height: 0;
+    }
+}
+
+
+// #Company Name
+// -----------------------------
+
+.company-name {
+    @media @tablet {
+        text-align:center;
+    }
+}
+
+.company-link {
+    vertical-align: top;
+    @media @tablet {
+        font-size: bkscale(@font__companyname--font-size,0.8);
+        line-height: bkscale(@font__companyname--line-height,0.8);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__companyname--font-size,0.7);
+        line-height: bkscale(@font__companyname--line-height,0.7);
+    }
+}
+
+.companyname__company-link a:hover {
+    text-decoration: none;
+}
+
+// Header  Companyname Flexbox
+.header-companyname {
+    // Flex child
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-box-flex: 10;
+    -moz-box-flex: 10;
+    -webkit-flex: 10 10 auto;
+    -ms-flex: 10 10 auto;
+    flex: 10 10 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+
+    @media @tablet {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    @media @mobile {
+        margin-top: 0;
+    }
+}
+
+
+
+
+// -----------------------------
+// 3.  #Feature
+// -----------------------------
+
+
+.feature:after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: fade(@color__feature-content--background, 20%);
+}
+
+
+// Feature Background (Image)
+// --------------------------
+
+.feature__background-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 500px;
+    display: table;
+    height: 500px;
+    width: 100%;
+    @media @tablet {
+        min-height: 400px;
+        height: 550px;
+    }
+    @media @mobile {
+        min-height: 200px;
+        height: 450px;
+    }
+}
+
+
+// Feature Content Wrap
+// --------------------
+
+.feature__content-wrap {
+    text-align:center;
+    max-width: 80%;
+    padding: 100px 0 0;
+    vertical-align: bottom;
+    display: table-cell;
+    z-index: 9999;
+    position: relative;
+    @media @tablet {
+        max-width: 100%;
+        padding: 100px 60px 30px;
+    }
+    @media @mobile {
+        padding: 100px 20px 20px;
+    }
+}
+
+.feature__content-inner-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+// Feature Content
+// ---------------
+
+.feature__headline {
+    max-width: 70%;
+    text-align: left;
+    @media @tablet {
+        font-size: bkscale(@font__feature-headline--font-size,0.6);
+        line-height: bkscale(@font__feature-headline--line-height,0.7);
+        max-width: 100%;
+    }
+    @media @mobile {
+        font-size: bkscale(@font__feature-headline--font-size,0.5);
+        line-height: bkscale(@font__feature-headline--line-height,0.6);
+    }
+}
+
+.feature__strapline {
+    max-width: 50%;
+    text-align: left;
+    @media @tablet {
+        font-size: bkscale(@font__feature-strapline--font-size,0.9);
+        line-height: bkscale(@font__feature-strapline--line-height,0.9);
+        max-width: 100%;
+    }
+    @media @mobile {
+        font-size: bkscale(@font__feature-strapline--font-size,0.8);
+        line-height: bkscale(@font__feature-strapline--line-height,0.8);
+    }
+}
+
+.feature__headline,
+.feature__strapline {
+    @media only screen and (max-width: 1024px) {
+        max-width: 100%;
+    }
+}
+
+
+// Feature Button
+// ---------------
+
+.feature__button {
+    margin: 10px 0 0 0;
+    color: @color__feature-button--text;
+    background-color: @color__feature-button--background;
+    float: left;
+    &:hover {
+        background-color: @color__feature-button--background--hover;
+    }
+}
+
+
+// Default Page Feature
+// --------------------------
+
+.default-feature .feature__background-image {
+    min-height: 150px;
+    height: 150px;
+}
+
+
+// Feature Overlay
+// --------------------------
+
+[data-widget-type="feature"] .widget-overlay {
+    top: 100px !important;
+}
+
+
+// Feature Arrow
+// ------------------------------
+
+
+.feature-arrow {
+    position: relative;
+    top: -100px;
+    opacity: .5;
+    z-index: 99999;
+
+    @media @bp-global-above-fullwidth {
+        top: -100px;
+    }
+    @media @bp-1050 {
+        top: -100px;
+    }
+    @media @mobile {
+        top: -100px;
+    }
+}
+
+.feature-arrow-link {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+    height: 80px;
+    margin-right: 22%;
+    background-image: image('/images/down-arrow.png');
+    background-repeat: no-repeat;
+}
+
+// Bounce Keyframes
+@-webkit-keyframes bounce {
+    from {
+        top: 0;
+    }
+    to {
+        top: 8px;
+    }
+}
+@-moz-keyframes bounce {
+    from {
+        top: 0;
+    }
+    to {
+        top: 8px;
+    }
+}
+
+
+
+
+// -----------------------------
+// 4. #Images
+// -----------------------------
+
+// Image Widget
+// ------------
+
+// Title
+.image-title {
+    font-size: @font__h2--font-size;
+    line-height: @font__h2--line-height;
+}
+
+.imagewidget {
+    .image-title,
+    .image-description {
+        color: @font-swatch5-color;
+        text-shadow: none;
+    }
+}
+
+
+
+
+// -----------------------------
+// 5.  #Gallery
+// -----------------------------
+
+// Homepage Gallery
+// ----------------
+
+.homepage-gallery {
+    .gallery .gallery-item {
+        width: 50%;
+    }
+}
+
+
+.gallery {
+
+    // Gallery Item
+    // ------------
+
+    .gallery-item {
+        height: 500px;
+        overflow: hidden;
+    }
+
+
+
+    // Gallery Caption
+    // ---------------
+
+    .caption {
+        display: block !important;
+        height: 100%;
+        opacity: 0; // Hides caption by default
+
+        .transition(@duration:0.3s, @ease:ease-in-out); // Mixins
+    }
+
+
+
+
+    // Hover State
+    // ---------------
+
+    .figure:hover .caption {
+        visibility: visible;
+        opacity: 1;
+        background-color: @color__gallery-caption--background;
+        &:after {
+            content: '\f067';
+            font-family: 'FontAwesome', sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            color: white;
+            font-size: 20px;
+            font-weight: 100;
+        }
+    }
+
+
+
+
+    // Caption Link
+    // ---------------
+
+    .gallery__caption-link {
+        position: absolute;
+        bottom: 0;
+        padding: 20px 10px;
+    }
+
+    a.gallery__caption-link:hover {
+        text-decoration: none;
+    }
+
+
+
+    // Smaller screens
+    // ---------------
+
+    @media @bp-tablet {
+        .gallery-item {
+            height: 210px;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// 6.  #Slideshow
+// -----------------------------
+
+// Slideshow Mobile
+// ----------------
+
+.responsiveslideshow {
+    @media @mobile {
+        height: 300px!important;
+        min-height: 300px!important;
+    }
+}
+
+.responsiveslideshow .slides-list {
+    @media @mobile {
+        min-height: 300px!important;
+        height: 300px!important;
+    }
+}
+
+.responsiveslideshow .slide-item {
+    @media @mobile {
+        height: 300px!important;
+    }
+}
+
+
+// Slideshow items
+// ---------------
+
+// Slideshow set minimum height
+.responsiveslideshow .slides-list,
+.responsiveslideshow .figure {
+    position: relative;
+    min-height: 400px;
+}
+
+
+// Slideshow Layout
+// ----------------
+
+// Slideshow Height
+.responsiveslideshow, .responsiveslideshow__figure {
+    position: relative;
+    min-height: 400px;
+}
+
+
+// Fixes jumping slides
+.responsiveslideshow .slide-item {
+    overflow: hidden;
+    height: 400px;
+}
+
+
+// Slideshow Images
+// ----------------
+
+// Use Background-image Method
+.responsiveslideshow__figure {
+    background-size: cover;
+    background-position: center;
+}
+// Hide Img Element
+.responsiveslideshow__image {
+    display: none;
+}
+
+
+// Slideshow Image Captions
+// ------------------------
+
+.responsiveslideshow .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    background-color: @color__slideshow-caption--background;
+
+    @media @bp-mobile {
+        padding: 0 20px;
+    }
+}
+
+
+.responsiveslideshow__image-title,
+.responsiveslideshow__image-description {
+    width: 100%;
+    padding: 3px 20px;
+    margin-bottom: 0;
+    color: @bg-color;
+}
+
+
+// Slideshow Controls
+// ------------------
+
+// Navigation Buttons
+.slide-navigation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+      -webkit-box-direction: normal;
+         -moz-box-direction: normal;
+         -webkit-box-orient: horizontal;
+            -moz-box-orient: horizontal;
+     -webkit-flex-direction: row;
+         -ms-flex-direction: row;
+             flex-direction: row;
+          -webkit-flex-wrap: nowrap;
+              -ms-flex-wrap: nowrap;
+                  flex-wrap: nowrap;
+           -webkit-box-pack: justify;
+              -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+              -ms-flex-pack: justify;
+            justify-content: space-between;
+      -webkit-align-content: center;
+         -ms-flex-line-pack: center;
+              align-content: center;
+          -webkit-box-align: center;
+             -moz-box-align: center;
+        -webkit-align-items: center;
+             -ms-flex-align: center;
+                align-items: center;
+}
+
+
+// Prev, Next, Pause Buttons
+button.responsiveslideshow__previous-button,
+button.responsiveslideshow__next-button,
+button.pause-toggle {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    color: @contrast-color;
+    background-color: transparent;
+    font-size: 15px;
+    &:hover {
+        background-color: transparent;
+        color: @bg-color;
+    }
+    // Removes margin-right for icons
+    &:before {
+        margin-right: 0;
+    }
+}
+
+
+// Ensures pause button is aligned centrally if next and prev buttons are hidden
+button.pause-toggle {
+    margin: 0 auto;
+}
+
+
+// Removes button text
+.responsiveslideshow__control-text {
+    display: none;
+}
+
+
+// Pagination
+// ----------
+
+.responsiveslideshow__pagination-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+
+.responsiveslideshow__pagination-item {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+
+// Pagination Item
+.responsiveslideshow__pagination-item {
+    margin: 1px 0;
+}
+
+
+// Pagination Button
+.responsiveslideshow .button--pagination {
+    width: 100%;
+    height: 3px;
+    text-align: left;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0;
+
+    background-color: @bg-color;
+    border-top: 1px solid @bg-color;
+    .transition(@duration:0.6s, @ease:ease-in-out); // Mixin > Other Mixins: Transitions
+}
+
+
+.responsiveslideshow .pagination-item.selected > .button--pagination {
+    background-color: @color__slideshow-caption--background;
+    border-top: 1px solid @color__slideshow-caption--background;
+}
+
+
+
+
+// -----------------------------
+// 7.  #Buttons
+// -----------------------------
+
+// Formatting all inputs and buttons so they match in size
+input, textarea, button, .button {
+    padding: 6px 12px;
+}
+
+
+
+//  #STANDARD
+//  --------------
+
+button,
+.button {
+    .transition(@duration:0.2s, @ease:ease-in-out); // Mixin
+    line-height: @font__button--line-height;
+    padding: 10px 15px;
+    
+    &:focus {
+        outline: 0;
+    }
+}
+
+
+
+
+// -----------------------------
+// 8.  #Forms
+// -----------------------------
+
+// Form Body
+.form-body {
+    margin: 20px 0;
+    @media @bp-mobile {
+        margin: 20px 0;
+    }
+}
+
+
+// Form Group
+.form-group {
+    margin-bottom: 20px;
+    @media @bp-mobile {
+        margin-bottom: 10px;
+    }
+}
+
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea, .input--single-line {
+    padding: 12px 10px;
+}
+
+
+// Legend
+// ----------
+
+legend {
+    width: 100%;
+    font-size: @font__h2--font-size;
+    font-family: @font__h2--font-family;
+    color: @color-swatch4;
+    letter-spacing: @font__h2--letter-spacing;
+    font-weight: @font__h2--font-weight;
+}
+
+
+// Label
+// ----------
+
+label {
+    font-family: @font__p--font-family;
+    font-size: @font__p--font-size;
+    color: @color__p--text;
+}
+
+
+// Select
+// ----------
+
+
+// Select Wrap
+.select-wrap {
+    position: relative;
+
+    // Dropdown Arrow
+    &:after {
+        content: '\f107';
+        font-family: 'FontAwesome', sans-serif;
+        display: inline-block;
+        height: 1em;
+        line-height: 1em;
+        text-align: center;
+        font-size: 20px;
+        color: @font-swatch5-color;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -0.5em;
+    }
+}
+
+// Select box
+.select {
+    border: 2px solid @contrast-color;
+    color: @paragraph-color;
+    font-size: bkscale(@font__p--font-size, 0.9);
+    border-radius: 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0 10px;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+
+    &:hover, &:focus {
+        background-color: transparent;
+    }
+
+}
+
+.select::-ms-expand {
+    display: none;
+}
+
+
+
+// Inputs: Text
+// ------------
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line {
+    // Padding is set in stylesheet.less
+    border: 2px solid @color-swatch2;
+    resize: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    &:focus {
+        border-color: @contrast-color;
+        box-shadow: none;
+    }
+}
+
+
+
+
+// -----------------------------
+// 9.  #Social Icons
+// -----------------------------
+
+
+// Template Social Icons
+// -----------------------------
+
+// Item Link
+.social-link {
+    color: lighten(@color-swatch4,10%);
+    .transition(@duration:0.2s, @ease:ease-in-out); // Mixin
+    &:hover {
+        color: @color-swatch4;
+        text-decoration: none;
+    }
+}
+
+// Hide Social name
+.social-name {
+    display: none;
+}
+
+
+
+
+// -----------------------------
+// 10.  #Twitter Feed
+// -----------------------------
+
+
+.twitter {
+
+    // Tweet Item
+    // ----------
+    .tweet-list {
+        .flex(@display: flex);
+        .justify-content(@justify: space-around);
+        .flex-wrap(@wrap: wrap);
+        margin-bottom: 20px;
+    }
+
+    .account-link {
+        letter-spacing: 0px;
+    }
+
+    .account-link a:hover {
+        text-decoration: none;
+    }
+
+    // Tweet Item
+    // ----------
+
+    .tweet-item {
+        min-height: 250px;
+        text-align: center;
+        display: inline-block;
+        background-color: @color__twitter-item--background;
+        margin-bottom: 0;
+        padding: 20px;
+
+        .flex(@display: flex);
+        .align-items(@align: center);
+        .justify-content(@justify: center);
+
+        -webkit-flex: 1 1 33.3%;
+        -ms-flex: 1 1 33.3%;
+        flex: 1 1 33.3%;
+
+        .account-name {
+            font-family: @font__p--font-family;
+            color: @color__twitter-account-name--text;
+            font-size: @font__p--font-size;
+            font-weight: @font__p--font-weight;
+            line-height: @font__p--line-height;
+        }
+        .tweet-content,
+        .tweet-metadata .timestamp,
+        .tweet-metadata .via {
+            color: @color__twitter-tweet--text;
+        }
+
+        .tweet-content a,
+        .tweet-metadata a {
+            text-decoration: underline;
+            color: @color__twitter-tweet--text;
+        }
+
+        .account-name {
+            font-size: bkscale(@font__h3--font-size,0.7);
+        }
+
+        .tweet-metadata {
+            font-size: bkscale(@font__p--font-size,0.8);
+        }
+
+        .account-name:before {
+            content: "\f099";
+            color: @bg-color;
+            color: #ffffff;
+            display: block;
+            font-family: 'FontAwesome', sans-serif;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        &:nth-of-type(odd) {
+            background-color: fade(@color__twitter-item--background,80%);
+        }
+    }
+
+
+
+    // Avatar
+    // ----------
+
+    .avatar {
+        display: none;
+    }
+
+
+
+    // Messages
+    // ----------
+
+    .message p {
+        color: @bg-color;
+    }
+
+
+    // Smaller screens
+    // ---------------
+
+    @media @bp-tablet {
+
+        // Tweet List
+        // ----------
+        .tweet-list {
+            display: block;
+        }
+    }
+
+}
+
+.responsivecolumns {
+
+    // All Columns
+    .column .twitter .tweet-item {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+
+// -----------------------------
+// 11.  #Divider (Keyline)
+// -----------------------------
+
+hr,
+hr.rule {
+    background-color: @color-swatch5;
+    height: 1px;
+}
+
+
+
+
+// -----------------------------
+// 12. #Yelp
+// -----------------------------
+
+.review-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+
+
+
+// -----------------------------
+// 13. #Messages
+// -----------------------------
+
+.message {
+    border: 3px solid @contrast-color;
+    margin: 20px 0;
+    padding: 10px 40px;
+    display: inline-block;
+
+    @media @bp-mobile {
+        margin: 30px 0;
+    }
+}
+
+.message:before {
+    left: 10px;
+    top: 8px;
+}
+
+
+
+
+// -----------------------------
+// 14. #Pagination
+// -----------------------------
+
+.pagination-item.current {
+    .button--pagination {
+        background-color: @contrast-color;
+    }
+}
+
+
+
+
+
+
