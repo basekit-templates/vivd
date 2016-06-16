@@ -277,34 +277,6 @@ select {
 
 
 
-// Responsive Columns
-// ------------------
-
-.responsivecolumns {
-    // Image
-    .product-item-image {
-        height: 200px;
-    }
-
-    // Price
-    .product-item-price {
-        max-width: inherit;
-        height: auto;
-        padding: 3px 5px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: bkscale(@font__p--font-size,0.8);
-    }
-
-    .product-item-title {
-        font-size: @font__p--font-size;
-        line-height: bkscale(@font__p--line-height,0.8);
-        text-align: left;
-    }
-}
-
-
-
 // -----------------------------
 // 2. #Single Product
 // -----------------------------
@@ -674,4 +646,76 @@ select {
         background-image: none !important;
     }
 
+}
+
+// ---------------------------------
+// #Columns Variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+@media @bp-global-columns {
+    .responsivecolumns {
+
+        .ecomproductslist__fieldset--search .ecomproductslist__form-group:nth-child(1),
+        .ecomproductslist .form-body,
+        .ecomproductslist .fieldset--search {
+            width: 100%;
+        }
+
+        // Image
+        .product-item-image {
+            height: 200px;
+        }
+    
+        // Price
+        .product-item-price {
+            max-width: inherit;
+            height: auto;
+            padding: 3px 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: bkscale(@font__p--font-size,0.8);
+        }
+    
+        .product-item-title {
+            font-size: @font__p--font-size;
+            line-height: bkscale(@font__p--line-height,0.8);
+        }
+
+        .product-content,
+        .product-images, {
+            width: 100%;
+            margin: 0;
+        }
+
+        // 3/4 columns
+        .columns-four-first,
+        .columns-four-second,
+        .columns-four-third,
+        .columns-four-fourth,
+        .columns-three-left,
+        .columns-three-right,
+        .columns-three-middle {
+
+
+        }
+
+
+        // 4 columns
+        // ------------------------------
+
+
+        .columns-four-first,
+        .columns-four-second,
+        .columns-four-third,
+        .columns-four-fourth {
+
+        }
+    }
 }
