@@ -82,7 +82,7 @@
     align-items: center;
     width:100%;
     // Layout
-    padding: 30px 0;
+    padding: 10px 0;
 
     @media @tablet {
         padding: 10px 4% 15px;
@@ -408,8 +408,16 @@
 
 // Title
 .image-title {
-    font-size: @font__h2--font-size;
-    line-height: @font__h2--line-height;
+    font-size: @font__p--font-size;
+    line-height: @font__p--line-height;
+    font-family: @font__p--font-family;
+    font-weight: 700;
+}
+
+.image-description {
+    font-size: @font__h4--font-size;
+    line-height: @font__h4--line-height;
+    font-family: @font__h4--font-family;
 }
 
 .imagewidget {
@@ -492,7 +500,8 @@
     .gallery__caption-link {
         position: absolute;
         bottom: 0;
-        padding: 20px 10px;
+        padding: 20px;
+        left: 0;
     }
 
     a.gallery__caption-link:hover {
@@ -660,9 +669,11 @@ button.pause-toggle {
     color: @contrast-color;
     background-color: transparent;
     font-size: 15px;
+    background-image: none;
     &:hover {
         background-color: transparent;
         color: @bg-color;
+        padding: 0;
     }
     // Removes margin-right for icons
     &:before {
@@ -771,16 +782,33 @@ input, textarea, button, .button {
 //  --------------
 
 button,
-.button {
+.button,
+.blogpostlist__read-more {
     .transition(@duration:0.2s, @ease:ease-in-out); // Mixin
     line-height: @font__button--line-height;
-    padding: 10px 15px;
-    
+    padding: 0;
+    background-image: image('/images/button-arrow.png');
+    background-image: image('/images/button-arrow.svg');
+    background-repeat: no-repeat;
+    padding: 2px 45px 2px 0;
+    background-position: right;
+
+    &:hover {
+        padding: 2px 55px 2px 0;
+        text-decoration: none;
+    }
+
     &:focus {
         outline: 0;
     }
 }
 
+.contactform__button,
+.signupform__button,
+.blogpostlist__read-more,
+.blogsearch__button {
+    text-transform: uppercase;
+}
 
 
 
@@ -788,20 +816,24 @@ button,
 // 8.  #Forms
 // -----------------------------
 
+
+// Form 
+.form {
+    background-color: @color__form--background;
+    padding: 40px;
+}
+
 // Form Body
 .form-body {
-    margin: 20px 0;
-    @media @bp-mobile {
-        margin: 20px 0;
-    }
+    margin: 0;
 }
 
 
 // Form Group
 .form-group {
     margin-bottom: 20px;
-    @media @bp-mobile {
-        margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -824,6 +856,7 @@ legend {
     color: @color-swatch4;
     letter-spacing: @font__h2--letter-spacing;
     font-weight: @font__h2--font-weight;
+    margin-bottom: 20px;
 }
 
 
@@ -834,6 +867,10 @@ label {
     font-family: @font__p--font-family;
     font-size: @font__p--font-size;
     color: @color__p--text;
+}
+
+.signupform__label {
+    display: none;
 }
 
 
@@ -864,14 +901,14 @@ label {
 
 // Select box
 .select {
-    border: 2px solid @contrast-color;
+    border: 0;
+    border-bottom: 1px solid @color-swatch2;
     color: @paragraph-color;
     font-size: bkscale(@font__p--font-size, 0.9);
     border-radius: 0;
     background-color: transparent;
     -webkit-appearance: none;
     -moz-appearance: none;
-    padding: 0 10px;
     display: block;
     width: 100%;
     position: relative;
@@ -898,13 +935,15 @@ input[type="password"],
 textarea,
 .input--single-line {
     // Padding is set in stylesheet.less
-    border: 2px solid @color-swatch2;
+    border: 0;
+    border-bottom: 1px solid @color-swatch2;
     resize: none;
     -webkit-appearance: none;
     -webkit-border-radius: 0;
     &:focus {
         border-color: @contrast-color;
         box-shadow: none;
+        .transition(@duration:0.2s, @ease:ease-in-out); // Mixin
     }
 }
 
@@ -923,17 +962,27 @@ textarea,
 .social-link {
     color: lighten(@color-swatch4,10%);
     .transition(@duration:0.2s, @ease:ease-in-out); // Mixin
+    font-size: 30px;
+    box-shadow: 0 4px 2px -4px transparent;
+    padding-bottom: 10px;
     &:hover {
         color: @color-swatch4;
         text-decoration: none;
+        box-shadow: 0 4px 2px -4px #7B7B7B;
     }
 }
 
-// Hide Social name
-.social-name {
-    display: none;
+// Icons
+.socialicons {
+    .icon:before {
+        display: none;
+    }
 }
 
+// Social Item
+.social-item {
+    margin-right: 30px;
+}
 
 
 
@@ -1121,11 +1170,33 @@ hr.rule {
 
 .pagination-item.current {
     .button--pagination {
-        background-color: @contrast-color;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: 0 4px 2px -4px #7B7B7B;
+    }
+}
+
+.ecomproductslist__pagination-item .button {
+    background-image: none;
+    margin: 0px;
+    padding: 10px;
+    box-shadow: 0 4px 2px -4px transparent; 
+    &:hover {
+        box-shadow: 0 4px 2px -4px #7B7B7B;
+        .transition(@duration:0.2s, @ease:ease-in-out); // Mixin
     }
 }
 
 
+// -----------------------------
+// 15. #Click to Call
+// -----------------------------
+
+.widget__clicktocall a {
+    text-decoration: none;
+    color: @color__h4--text;
+    font-size: @font__button--font-size;
+}
 
 
 

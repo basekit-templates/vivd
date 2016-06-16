@@ -1,23 +1,24 @@
 {
-    "name": "Mono",
+    "name": "Vivid",
     "thumbnail": "thumbnail.png",
-    "screenshot": "mono-screenshot.jpg",
+    "screenshot": "vivid-screenshot.jpg",
     "widgetVersion":2,
     "pageTypes": ["home"],
     "templateType":"standard",
     "images": [
         "images/image-1.jpg",
         "images/logo-default.png",
-        "images/feature-bg.jpg"
+        "images/gallery/1.jpg",
+        "images/gallery/2.jpg"
     ],
     "colorSwatches":
     {
         "Swatch 1": {
             "color1":"#f9f9f9",
             "color2":"#eeeeef",
-            "color3":"#df3c3c",
+            "color3":"#979797",
             "color4":"#313131",
-            "color5":"#7e7e7e",
+            "color5":"#979797",
             "color6":"#313131",
             "color7":"#E0E0E0"
         },
@@ -59,45 +60,45 @@
         }
     },
     "fontSwatch": {
-       "title": "Montserrat, Lato, sans-serif",
+       "title": "Work Sans",
         "font1": {
             "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
-            "font-size": "36px",
+            "font-size": "40px",
             "font-weight": "300",
-            "line-height": "46px",
+            "line-height": "50px",
             "color": "@color-swatch4",
             "letter-spacing": "0px"
         },
         "font2": {
             "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
-            "font-size": "30px",
+            "font-size": "36px",
             "font-weight": "300",
-            "line-height": "40px",
+            "line-height": "48px",
             "color": "@color-swatch4",
             "letter-spacing": "0px"
         },
         "font3": {
             "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
-            "font-size": "24px",
+            "font-size": "30px",
             "font-weight": "300",
-            "line-height": "34px",
+            "line-height": "42px",
             "color": "@color-swatch4",
             "letter-spacing": "0px"
         },
         "font4": {
             "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
-            "font-size": "18px",
+            "font-size": "26px",
             "font-weight": "300",
-            "line-height": "28px",
+            "line-height": "36px",
             "color": "@color-swatch4",
             "letter-spacing": "0px"
         },
         "font5": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
-            "font-size": "16px",
+            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
+            "font-size": "24px",
             "font-weight": "300",
-            "line-height": "26px",
-            "color": "@color-swatch4",
+            "line-height": "40px",
+            "color": "@color-swatch5",
             "letter-spacing": "0px"
         },
         "font6": {
@@ -113,10 +114,10 @@
          },
         "font7": {
             "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
-            "font-size": "16px",
+            "font-size": "22px",
             "font-weight": "300",
-            "line-height": "26px",
-            "color": "@color-swatch1",
+            "line-height": "30px",
+            "color": "@color-swatch4",
             "letter-spacing": "0px",
             "background-color": "lighten(@color-swatch4,20%)",
             "background-color-hover": "@color-swatch4"
@@ -130,7 +131,7 @@
             "letter-spacing": "0px"
         },
         "font9": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Ubuntu\", Candara, Futura, sans-serif",
             "font-size": "18px",
             "font-weight": "300",
             "line-height": "28px",
@@ -138,7 +139,7 @@
             "letter-spacing": "0px"
         },
         "font10": {
-            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
             "font-size": "30px",
             "font-weight": "300",
             "line-height": "40px",
@@ -224,8 +225,8 @@
             "font__navigation--letter-spacing": "@font-swatch6-letter-spacing"
         },
         "button": {
-            "color__button--background": "lighten(@color-swatch4,10%)",
-            "color__button--background--hover": "@color-swatch4",
+            "color__button--background": "transparent",
+            "color__button--background--hover": "transparent",
             "color__button--text": "@font-swatch7-color",
 
             "font__button--font-family": "@font-swatch7-font-family",
@@ -233,6 +234,10 @@
             "font__button--font-weight": "@font-swatch7-font-weight",
             "font__button--line-height": "@font-swatch7-line-height",
             "font__button--letter-spacing": "@font-swatch7-letter-spacing"
+        },
+        "form": {
+            "color__form--background" : "#fff",
+            "color__form-legend--text" : "#000"
         },
         "twitter": {
             "color__twitter-item--background": "lighten(@color-swatch4,10%)",
