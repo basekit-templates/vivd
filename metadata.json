@@ -240,9 +240,9 @@
             "color__form-legend--text" : "#000"
         },
         "twitter": {
-            "color__twitter-item--background": "lighten(@color-swatch4,10%)",
-            "color__twitter-account-name--text": "@color__body--background",
-            "color__twitter-tweet--text": "@color__body--background"
+            "color__twitter-item--background": "#fff",
+            "color__twitter-account-name--text": "@color-swatch4",
+            "color__twitter-tweet--text": "@color-swatch4"
         },
         "gallery": {
             "color__gallery-caption--background": "fade(@color-swatch4,50%)",
