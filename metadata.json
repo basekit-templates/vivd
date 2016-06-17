@@ -246,16 +246,23 @@
         },
         "gallery": {
             "color__gallery-caption--background": "fade(@color-swatch4,50%)",
-            "color__gallery-title--text": "@color-swatch1",
-            "color__gallery-description--text": "@color-swatch1"
+            "color__gallery-title--text": "#fff",
+            "color__gallery-description--text": "#fff"
         },
         "slideshow": {
             "color__slideshow-caption--background":  "fade(@color-swatch4,50%)",
-            "color__slideshow-title--text": "@color-swatch1",
-            "color__slideshow-description--text": "@color-swatch1"
+            "color__slideshow-title--text": "#fff",
+            "color__slideshow-description--text": "#fff"
+        },
+        "blog": {
+            "color__blogsearch-legend--text" : "@color__form-legend--text",
+            "color__blogpost-article--background" : "#fff",
+            "color__blogpost-title--text" : "@color__h3--text",
+            "color__blogpostlist-title--text" : "@color__h3--text",
+            "color__blogpostlist-article--background" : "transparent"
         },
         "ecommerce": {
-            "color__ecomproductslist-product-item--background": "@color-swatch1",
+            "color__ecomproductslist-product-item--background": "#fff",
             "color__ecomproduct-title--text": "@color-swatch4",
             "color__ecomproduct-price--text": "@color-swatch5"
         }
