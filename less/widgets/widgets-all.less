@@ -1019,6 +1019,8 @@ textarea,
         display: inline-block;
         background-color: @color__twitter-item--background;
         margin-bottom: 30px;
+        width: 50%;
+        padding: 40px;
 
         .flex(@display: flex);
         .align-items(@align: center);
@@ -1039,6 +1041,9 @@ textarea,
 
         .tweet-wrap p {
             padding-bottom: 0;
+            color: @color__twitter-tweet--text;
+            font-style: italic;
+            font-size: 20px;
         }
 
         .tweet-content a,
@@ -1058,10 +1063,6 @@ textarea,
         .account-name:before {
             display: none;
         }
-
-        &:nth-of-type(odd) {
-            background-color: fade(@color__twitter-item--background,80%);
-        }
     }
 
 
@@ -1070,8 +1071,7 @@ textarea,
     // ----------
 
     .avatar {
-        padding: 20px;
-        background-color: #e6e6e6;
+        padding: 0;
     }
 
 
@@ -1096,6 +1096,13 @@ textarea,
         }
     }
 
+}
+
+.tweet-item {
+    &:hover {
+        background-color: #fff;
+        .transition;
+    }
 }
 
 .responsivecolumns {
@@ -1275,9 +1282,9 @@ hr.rule {
 .twitter__account-link {
     -webkit-box-ordinal-group: 3;
     -moz-box-ordinal-group: 3;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
-    order: 2;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
     -webkit-box-flex: 0;
     -moz-box-flex: 0;
     -webkit-flex: 0 1 auto;
@@ -1286,6 +1293,7 @@ hr.rule {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
+    width: 100%;
     }
 
 .twitter__tweet-content {
@@ -1318,5 +1326,6 @@ hr.rule {
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
+    width: 100%;
     }
 

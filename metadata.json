@@ -240,7 +240,7 @@
             "color__form-legend--text" : "#000"
         },
         "twitter": {
-            "color__twitter-item--background": "#fff",
+            "color__twitter-item--background": "transparent",
             "color__twitter-account-name--text": "@color-swatch4",
             "color__twitter-tweet--text": "@color-swatch4"
         },
