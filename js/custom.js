@@ -33,3 +33,39 @@ $(document).ready(function() {
     });
 
 });
+
+// Makes the whole twitter item clickable
+$(document).ready(function() {
+
+    $('.tweet-item').each(function() {
+        var href = $(this).find("a").attr("href");
+        if(href) {
+            $(this).addClass("clickable");
+        }
+    });
+
+
+    metaKeyPressed = false;
+
+    $(window).keydown(function(e) {
+        if (e.ctrlKey || e.metaKey) {
+            metaKeyPressed = true;
+        }
+    });
+
+
+    $('.tweet-item').click(function() {
+
+        var href = $(this).find("a").attr("href");
+        if(href) {
+
+            if (metaKeyPressed == true) {
+                 window.open(href, '_blank');
+            } else {
+                window.location = href;
+            }
+        }
+
+    });
+
+});
