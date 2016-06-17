@@ -42,7 +42,6 @@
 
 .bk-pt-default .template-header {
     position: relative;
-    background-color: @color__body--background;
 }
 
 
@@ -101,9 +100,6 @@
     }
 }
 
-.bk-pt-default .template-header {
-    background-color: @color-swatch1;
-}
 
 
 
@@ -896,6 +892,10 @@ label {
     color: @color__p--text;
 }
 
+.contactform__label {
+    display: none;
+}
+
 .signupform__label {
     display: none;
 }
@@ -960,8 +960,7 @@ input[type="search"],
 input[type="email"],
 input[type="password"],
 textarea,
-.input--single-line,
-.ecomproductslist__input {
+.input--single-line {
     // Padding is set in stylesheet.less
     border: 0;
     border-bottom: 1px solid @color-swatch2;
@@ -975,6 +974,11 @@ textarea,
     }
 }
 
+.ecomproductslist__input {
+    &:focus {
+        border-color: @contrast-color;!important;
+    }
+}
 
 
 
