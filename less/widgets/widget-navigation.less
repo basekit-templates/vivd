@@ -169,18 +169,17 @@
 // -----------------
 
 
-@media @bp-desktop {
 
 
     // Clears margin on ul, hides navigation on mobile (made visible in conjunction with navigation-toggle)
-        .navigation-list {
-            margin: 0;
-            visibility: hidden;
+    .navigation-list {
+        margin: 0;
+        visibility: hidden;
 
-            &.open {
-                visibility: visible;
-            }
+        &.open {
+            visibility: visible;
         }
+    }
 
 
 
@@ -310,16 +309,16 @@
 
     .navigation-list--children {
         .navigation-item.folder.open-folder & {
-                display: block;
-                height: auto;
-                padding: 0;
-                position: relative;
-                opacity: 1;
-                .transform(@x:0, @y:0);
-                visibility: visible;
-            }
+            display: block;
+            height: auto;
+            padding: 0;
+            position: relative;
+            opacity: 1;
+            .transform(@x:0, @y:0);
+            visibility: visible;
+        }
     }
-}
+
 
 
 
@@ -388,7 +387,6 @@
 
     &:hover {
         background-color: @color__navigation--text;
-        padding: 22px 0px 22px 20px; 
 
         &:after, &:before {
             background: @color__navigation--text;

@@ -38,6 +38,7 @@
     z-index: 99999;
     width: 100%;
     border-bottom: 1px solid #E6E6E6;
+    padding: 20px 0;
 }
 
 .bk-pt-default .template-header {
@@ -254,7 +255,7 @@
     padding: 100px 0 0;
     vertical-align: bottom;
     display: table-cell;
-    z-index: 9999;
+    z-index: 999;
     position: relative;
     @media @tablet {
         max-width: 100%;
@@ -350,7 +351,7 @@
     position: relative;
     top: -100px;
     opacity: .5;
-    z-index: 99999;
+    z-index: 999;
 
     @media @bp-global-above-fullwidth {
         top: -100px;
@@ -498,12 +499,37 @@
         bottom: 0;
         padding: 20px;
         left: 0;
+        top: 0;
+        right: 0;
     }
 
     a.gallery__caption-link:hover {
         text-decoration: none;
     }
 
+     // Flexbox
+    // ---------------
+
+    .caption-link {
+        .flex(@display: flex);
+        .flex-direction(@direction: column);
+        .flex-wrap(@wrap: wrap);
+        .justify-content(@justify: flex-end);
+        .align-content(@align: center);
+        .align-items(@align: flex-start);
+    }
+    
+    .image-title {
+        .flex-order(@order: 0);
+        .flex(@display: 0 0 auto);
+        .align-self(@align: flex-start);
+    }
+    
+    .image-description {
+        .flex-order(@order: 1);
+        .flex(@display: 0 0 auto);
+        .align-self(@align: auto);
+    }
 
 
     // Smaller screens
@@ -522,6 +548,7 @@
 // -----------------------------
 // 6.  #Slideshow
 // -----------------------------
+
 
 // Slideshow Mobile
 // ----------------
@@ -1077,6 +1104,10 @@ textarea,
             width: 100%;
             padding: 20px;
             margin-bottom: 0;
+        }
+
+        @media @tablet {
+            width: 100%;
         }
 
         &:hover {
