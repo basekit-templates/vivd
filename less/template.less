@@ -23,6 +23,76 @@
 // -----------------------------
 
 
+// H1
+// ------------------------------
+
+h1 {
+    @media @bp-global-medium {
+        font-size: bkscale(@font__h1--font-size, 0.9);
+        line-height: bkscale(@font__h1--line-height, 0.9);
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__h1--font-size, 0.8);
+        line-height: bkscale(@font__h1--line-height, 0.8);
+    }
+}
+
+// H2
+// ------------------------------
+
+h2 {
+    @media @bp-global-medium {
+        font-size: bkscale(@font__h2--font-size, 0.9);
+        line-height: bkscale(@font__h2--line-height, 0.9);
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__h2--font-size, 0.8);
+        line-height: bkscale(@font__h2--line-height, 0.8);
+    }
+}
+
+// H3
+// ------------------------------
+
+h3 {
+    @media @bp-global-medium {
+        font-size: bkscale(@font__h3--font-size, 0.9);
+        line-height: bkscale(@font__h3--line-height, 0.9);
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__h3--font-size, 0.8);
+        line-height: bkscale(@font__h3--line-height, 0.8);
+    }
+}
+
+// H4
+// ------------------------------
+
+h4 {
+    @media @bp-global-medium {
+        font-size: bkscale(@font__h4--font-size, 0.9);
+        line-height: bkscale(@font__h4--line-height, 0.9);
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__h4--font-size, 0.8);
+        line-height: bkscale(@font__h4--line-height, 0.8);
+    }
+}
+
+// Paragraph and Strings
+// ------------------------------
+
+p, &  {
+    @media @bp-global-medium {
+        font-size: bkscale(@font__p--font-size, 1);
+        line-height: bkscale(@font__p--line-height, 1);
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__p--font-size, 1);
+        line-height: bkscale(@font__p--line-height, 1);
+    }
+}
+
 // Anchor links
 a {
     color: @color__link--text;

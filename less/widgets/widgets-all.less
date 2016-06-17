@@ -1073,6 +1073,12 @@ textarea,
         .align-items(@align: center);
         .justify-content(@justify: center);
 
+        @media @bp-global-small {
+            width: 100%;
+            padding: 20px;
+            margin-bottom: 0;
+        }
+
         &:hover {
             background-color: #fff;
             .transition;

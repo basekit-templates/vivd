@@ -43,6 +43,10 @@
             background-color: #fff;
         }
 
+        @media @mobile {
+            padding: 10px;
+        }
+
     }
 
 
@@ -90,6 +94,10 @@
 
             padding: 0px 60px 30px;
             margin: 0;
+
+            @media @mobile {
+                padding: 0px 20px 0px;
+            }
         }
 
 
@@ -103,8 +111,8 @@
         }
 
         .post-header h2 {
-            font-size: 48px;
-            line-height: 58px;
+            font-size: @font__h1--font-size;
+            line-height: @font__h1--line-height;
             a:hover {
                 text-decoration: none;
             }
@@ -126,6 +134,10 @@
             .flex-order(@order: 1);
             margin: 0;    
             padding: 40px 60px 10px;
+
+            @media @mobile {
+                padding: 20px 20px 10px;
+            }
 
             .timestamp {
                 font-size: 14px;
@@ -169,43 +181,17 @@
         // Blog Article
         // ---------------
 
-        .post-article {
-        &:nth-of-type(even) {
-                .post-image {
-                    .flex-order(@order: 0);
-                }
-
-
-                .post-content {
-                    .flex-order(@order: 1);
-                    padding-left: 20px;
-                }
-
-                .post-footer {
-                    text-align: right;
-                }
-            }
-        }
-
 
 
 
         // Post Content
         // ---------------
 
-        .post-content {
-            padding: 0 20px;
-        }
-
-
 
 
         // Post Timestamp
         // ---------------
 
-        .post-footer .timestamp {
-            margin: 40px 20px 20px;
-        }
     }
 
 
@@ -251,6 +237,9 @@
         background-color: @color__blogpost-article--background;
         padding: 60px;
         margin: 0;
+        @media @mobile {
+            padding: 40px;
+        }
     }
 
     .post-image .image {
