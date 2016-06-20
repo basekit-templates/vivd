@@ -48,6 +48,8 @@
 
 .navigation-item {
     cursor: pointer;
+    max-width: 1024px;
+    margin: 0px auto;
 }
 
 
@@ -87,31 +89,18 @@
 
 // Navigation Link
 .navigation-item .item-name {
-    padding: 0;
-    margin: 5px 10px;
-    padding-bottom: 1px;
-    @media @tablet {
-        margin: 15px 10px;
-    }
     &:hover {
-        border-bottom: 3px solid @color__navigation--text--hover;
         display: inline-block;
         color: @color__navigation--text;
-        padding-bottom: 1px;
-        margin: 5px 10px;
         @media @tablet {
             border-bottom: 0;
             display: block;
-            margin: 15px 10px;
-            text-decoration: underline;
         }
     }
 }
 
 .navigation-item.folder .item-name:hover {
-    margin: 15px 10px;
-    padding-bottom: 1px;
-    border-bottom: 2px solid @color__navigation--text--hover;
+
 }
 
 // Dropdown Menu
@@ -120,17 +109,9 @@
 .navigation-item.folder {
     .item-name:hover {
         border: none;
-        padding: 0;
-        margin: 5px 10px;
         display: block;
-        padding-bottom: 1px;
-        @media @tablet {
-            margin: 15px 10px;
-            text-decoration: underline;
-        }
     }
     .navigation-list--children .item-name:hover {
-        padding-bottom: 1px;
     }
 }
 
@@ -139,13 +120,10 @@
 
 // Selected nav item
 .navigation-item.selected > .item-name {
-    border-bottom: 2px solid @color__navigation--text--selected;
-    padding-bottom: 1px;
     color: @color__navigation--text;
     @media @tablet {
         border-bottom: 0;
         padding-bottom: 0;
-        text-decoration: underline;
     }
 }
 
@@ -159,165 +137,133 @@
 }
 
 .navigation-item.folder.open-folder .navigation-list--children {
-    @media @tablet {
-        background-color: @color-swatch2;
-    }
+    background-color: darken(@color__navigation--background,3%);
 }
 
 
-// Mobile Navigation
-// -----------------
+// Clears margin on ul, hides navigation on mobile (made visible in conjunction with navigation-toggle)
+.navigation-list {
+    margin: 0;
+    visibility: hidden;
+    &.open {
+        visibility: visible;
+    }
+}
 
+// Extended Navigation
+// -------------------
+.extendednavigation {
+    z-index: 1;
+    height: 100%;
+    @media @bp-mobile {
+        width: 4px;
+    }
+}
 
+// Navigation List
+// -------------------
+.navigation-body {
+    height: 100%;
+}
+.navigation-list {
+    position: fixed;
+    -webkit-backface-visibility: hidden;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+    .transform(@x:100%, @y:0);
+    transition-duration: 0.4s;
+    padding: 150px 20px;
+    background-color: @color__body--background;
+    // Allows scrolling on mobile
+    &.open {
+        overflow: auto;
+    }
+}
 
-
-    // Clears margin on ul, hides navigation on mobile (made visible in conjunction with navigation-toggle)
-    .navigation-list {
-        margin: 0;
-        visibility: hidden;
-
+// Hides navigation until toggled
+.navigation-list {
+    margin: 0;
         &.open {
-            visibility: visible;
-        }
-    }
-
-
-
-
-    // Extended Navigation
-    // -------------------
-
-    .extendednavigation {
-        z-index: 1;
-        height: 100%;
-
-
-        @media @bp-mobile {
-            width: 4px;
-        }
-    }
-
-
-    // Navigation List
-    // -------------------
-
-    .navigation-body {
-        height: 100%;
-    }
-
-    .navigation-list {
-        position: fixed;
-        -webkit-backface-visibility: hidden;
-        left: 0;
-        top: 0;
-        height: 100vh;
-        height: 100%;
-        width: 100%;
-        .transform(@x:100%, @y:0);
-        transition-duration: 0.4s;
-
-        padding: 150px 20px;
-        background-color: @color__body--background;
-
-        // Allows scrolling on mobile
-        &.open {
-            overflow: auto;
-        }
-    }
-
-
-    // Hides navigation until toggled
-    .navigation-list {
-        margin: 0;
-            &.open {
-                display: block;
-            }
-    }
-
-
-    // Navigation Item
-    // -------------------
-
-    // Navigation item
-    .navigation-item {
-        opacity: 0;
-        .transform(@x:0, @y:5px);
-        .transition(@duration:1s, @ease:ease-in-out);
-        display: block;
-        position: relative;
-        cursor: pointer;
-
-        z-index: 0;
-    }
-
-
-    // Navigation item when nav is open
-    .navigation-list.open {
-      .transform(@x:0, @y:0);
-
-      .navigation-item {
-            .transform(@x:0, @y:0);
             display: block;
-            opacity: 1;
-      }
+        }
+}
+
+// Navigation Item
+// -------------------
+
+// Navigation item
+.navigation-item {
+    opacity: 0;
+    .transform(@x:0, @y:5px);
+    .transition(@duration:1s, @ease:ease-in-out);
+    display: block;
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+}
+
+// Navigation item when nav is open
+.navigation-list.open {
+  .transform(@x:0, @y:0);
+  .navigation-item {
+        .transform(@x:0, @y:0);
+        display: block;
+        opacity: 1;
     }
+}
 
+// Folders
+// -------------
 
-    // Folders
-    // -------------
+// Parent nav items, adds arrow icon
+.item-name--parent:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-left: 4px;
+    border: 5px solid transparent;
+    border-top-color: @color__navigation--text;
+}
 
-    // Parent nav items, adds arrow icon
-    .item-name--parent:after {
-        display: inline-block;
-        vertical-align: middle;
-        content: "";
-        margin-left: 4px;
-        border: 5px solid transparent;
-        border-top-color: @color__navigation--text;
+.navigation-list .navigation-list--children {
+    padding: 0;
+    position: relative;
+    top: 100%;
+    height: auto;
+    min-width: 100%;
+    background-color: @bg-color;
+    white-space: nowrap;
+    .transform(@x:-5px, @y:0);
+    .transition(@duration:0.4s, @ease:ease-in-out);
+    display: block;
+    position: absolute;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    @media @bp-tablet {
+        left: 0;
     }
+}
 
-
-    .navigation-list .navigation-list--children {
+// Less Framework Reset
+.navigation-item:hover .navigation-list--children {
+    display: none;
+}
+.navigation-list--children {
+    .navigation-item.folder.open-folder & {
+        display: block;
+        height: auto;
         padding: 0;
         position: relative;
-        top: 100%;
-        height: auto;
-        min-width: 100%;
-        background-color: @bg-color;
-        white-space: nowrap;
-
-        .transform(@x:-5px, @y:0);
-        .transition(@duration:0.4s, @ease:ease-in-out);
-
-        display: block;
-        position: absolute;
-        height: 0;
-        opacity: 0;
-        overflow: hidden;
-        visibility: hidden;
-
-        @media @bp-tablet {
-            left: 0;
-        }
+        opacity: 1;
+        .transform(@x:0, @y:0);
+        visibility: visible;
     }
-
-        // Less Framework Reset
-
-    .navigation-item:hover .navigation-list--children {
-        display: none;
-    }
-
-    .navigation-list--children {
-        .navigation-item.folder.open-folder & {
-            display: block;
-            height: auto;
-            padding: 0;
-            position: relative;
-            opacity: 1;
-            .transform(@x:0, @y:0);
-            visibility: visible;
-        }
-    }
+}
 
 
 
@@ -334,7 +280,7 @@
     background-clip: content-box;
     width: 50px;
     height: 47px;
-    padding: 22px 0px 22px 20px;
+    padding: 22px 0px 22px 20px!important;
     position: relative;
     right: 30px;
     text-indent: 9999px;
@@ -398,8 +344,9 @@
     // ------------------------------
 
     .open & {
-        background-color: fade(@color__navigation--text, 0%);
+        background-color: transparent;
         z-index: 100000;
+        background-image: none;
 
         &:before {
             top: 23px; background: @color__navigation--text; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);

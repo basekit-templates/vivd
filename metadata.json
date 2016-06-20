@@ -103,9 +103,9 @@
         },
         "font6": {
             "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
-            "font-size": "15px",
+            "font-size": "24px",
             "font-weight": "300",
-            "line-height": "28px",
+            "line-height": "38px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch7",
             "letter-spacing": "0px",
@@ -215,11 +215,12 @@
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing"
         },
         "navigation": {
+            "color__navigation--background" : "@color-swatch2",
             "color__navigation--text": "@font-swatch6-color",
             "color__navigation--text--selected": "@color-swatch3",
             "color__navigation--text--hover": "@color-swatch3",
             "font__navigation--font-family": "@font-swatch6-font-family",
-            "font__navigation--font-size": "15px",
+            "font__navigation--font-size": "@font-swatch6-font-size",
             "font__navigation--font-weight": "@font-swatch6-font-weight",
             "font__navigation--line-height": "@font-swatch6-line-height",
             "font__navigation--letter-spacing": "@font-swatch6-letter-spacing"

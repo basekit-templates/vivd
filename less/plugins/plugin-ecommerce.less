@@ -122,7 +122,9 @@
         display: none;
     }
     .listing-title {
-        text-align: center;
+        @media @tablet {
+            text-align: center;
+        }
     }
     .listing-header {
         margin-bottom: 60px;
@@ -176,7 +178,6 @@
     .listing-order {
         clear: both;
         padding: 0;
-        text-align: center;
         color: @color__p--text;
         padding-top: 20px;
     }
