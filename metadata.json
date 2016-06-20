@@ -201,8 +201,6 @@
             "color__feature-headline--text": "@font-swatch8-color",
             "color__feature-strapline--text": "@font-swatch9-color",
             "color__feature-button--text": "@font-swatch7-color",
-            "color__feature-button--background": "lighten(@color-swatch4,20%)",
-            "color__feature-button--background--hover": "@color-swatch4",
             "font__feature-headline--font-family" : "@font-swatch8-font-family",
             "font__feature-headline--font-size" : "@font-swatch8-font-size",
             "font__feature-headline--font-weight" : "@font-swatch8-font-weight",
@@ -226,8 +224,6 @@
             "font__navigation--letter-spacing": "@font-swatch6-letter-spacing"
         },
         "button": {
-            "color__button--background": "transparent",
-            "color__button--background--hover": "transparent",
             "color__button--text": "@font-swatch7-color",
 
             "font__button--font-family": "@font-swatch7-font-family",
