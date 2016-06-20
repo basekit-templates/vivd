@@ -215,7 +215,7 @@
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing"
         },
         "navigation": {
-            "color__navigation--background" : "@color-swatch2",
+            "color__navigation--background" : "#fff",
             "color__navigation--text": "@font-swatch6-color",
             "color__navigation--text--selected": "@color-swatch3",
             "color__navigation--text--hover": "@color-swatch3",
