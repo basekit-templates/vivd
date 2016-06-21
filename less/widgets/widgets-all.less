@@ -265,7 +265,7 @@
 .feature__content-inner-wrap {
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
 }
 
 
@@ -344,6 +344,9 @@
     top: -100px;
     opacity: .5;
     z-index: 999;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
 
     @media @bp-global-above-fullwidth {
         top: -130px;
@@ -394,12 +397,28 @@
     line-height: @font__p--line-height;
     font-family: @font__p--font-family;
     font-weight: 700;
+    @media @tablet {
+        font-size: bkscale(@font__p--font-size, 0.9);
+        line-height: bkscale(@font__p--line-height, 0.9);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__p--font-size, 0.7);
+        line-height: bkscale(@font__p--line-height, 0.7);
+    }
 }
 
 .image-description {
     font-size: @font__h4--font-size;
     line-height: @font__h4--line-height;
     font-family: @font__h4--font-family;
+    @media @tablet {
+        font-size: bkscale(@font__p--font-size, 0.9);
+        line-height: bkscale(@font__p--line-height, 0.9);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__p--font-size, 0.7);
+        line-height: bkscale(@font__p--line-height, 0.7);
+    }
 }
 
 .imagewidget {
@@ -423,6 +442,10 @@
 .homepage-gallery {
     .gallery .gallery-item {
         width: 50%;
+        @media @mobile {
+            width: 100%;
+            margin-bottom: 0px;
+        }
     }
     .gallery-list {
         width: 100%;
@@ -505,6 +528,10 @@
         .justify-content(@justify: flex-end);
         .align-content(@align: center);
         .align-items(@align: flex-start);
+
+        @media @tablet {
+            display: none;
+        }
     }
     
     .image-title {
@@ -860,6 +887,9 @@ button,
 .form {
     background-color: @color__form--background;
     padding: 40px;
+    @media @mobile {
+        padding: 20px;
+    }
 }
 
 // Form Body
@@ -1272,7 +1302,12 @@ hr.rule {
     font-size: @font__button--font-size;
 }
 
-
+.clicktocall__phone-number-link {
+    @media @mobile {
+        background-image: none;
+        padding: 0!important;
+    }
+}
 
 
 // ---------------------------------
@@ -1325,7 +1360,7 @@ hr.rule {
             }
 
             .twitter .tweet-item .tweet-content a {
-                font-size: 14px;
+                font-size: 12px;
             }
 
         }
