@@ -24,6 +24,8 @@
 // 12.   #Divider
 // 13.   #Yelp
 // 14.   #Messages
+// 15.   #Click to call
+// 16.   #Map
 
 
 
@@ -89,10 +91,8 @@
         display: inline-block;
     }
 
-    @media @mobile {
-        padding: 20px 16% 15px 4%;
-    }
 }
+
 .footer-wrapper {
     .justify-content(space-between);
 
@@ -1174,14 +1174,6 @@ textarea,
 
 
 
-    // Messages
-    // ----------
-
-    .message p {
-        color: @bg-color;
-    }
-
-
     // Smaller screens
     // ---------------
 
@@ -1338,6 +1330,15 @@ hr.rule {
 
             .blogpostlist .post-content {
                 padding: 0px 30px 30px;
+            }
+
+            .twitter .tweet-item {
+                display: block;
+                padding: 20px;
+            }
+
+            .twitter .tweet-wrap {
+                padding: 0;
             }
 
         }
