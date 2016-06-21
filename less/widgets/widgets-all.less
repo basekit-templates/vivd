@@ -315,6 +315,8 @@
     margin: 5px 0 20px 0;
     color: @color__feature-button--text;
     float: left;
+    z-index: 9999;
+    position: relative;
 }
 
 
@@ -331,24 +333,20 @@
 // ------------------------------
 
 
-.feature-arrow {
-    position: absolute;
-    opacity: .5;
-    z-index: 999;
-    max-width: 80px;
-    width: 90%;
-    bottom: 30px;
-    right: 5%;
-}
-
 .feature-arrow-link {
-    position: relative;
-    display: block;
-    width: 70px;
     height: 80px;
     background-image: image('/images/down-arrow.png');
     background-repeat: no-repeat;
-    float: right;
+    position: absolute;
+    opacity: .5;
+    z-index: 999;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    background-position: right;
 }
 
 // Bounce Keyframes
