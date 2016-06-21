@@ -241,16 +241,38 @@ body {
         }
     }
 
+    .twitter .tweet-item {
+        width: 100%;
+        padding: 0;
+    }
+
+    .twitter .avatar {
+        display: none;
+    }
+
     .twitter .tweet-item:hover {
         background-color: transparent;
     }
 
-    .twitter .tweet-item {
-        padding: 0;
+    .twitter .tweet-wrap {
+        @media @mobile {
+            text-align: center;
+        }
     }
 
     .twitter .tweet-item .tweet-wrap p {
         font-size: 12px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .signupform__legend {
+        @media @tablet {
+            text-align: left;
+        }
+        @media @mobile {
+            text-align: center;
+        }
     }
 
     // Map
