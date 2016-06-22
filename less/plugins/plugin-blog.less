@@ -116,6 +116,10 @@
             a:hover {
                 text-decoration: none;
             }
+            @media @bp-global-small {
+                font-size: bkscale(@font__h1--font-size, 0.7);
+                line-height: bkscale(@font__h1--line-height, 0.7);
+            }
         }
 
         .post-excerpt p {
@@ -247,8 +251,12 @@
     }
 
     .post-header h1 {
-        font-size: 48px;
-        line-height: 58px;
+        font-size: @font__h1--font-size;
+        line-height: @font__h1--line-height;
+        @media @bp-global-small {
+            font-size: bkscale(@font__h1--font-size, 0.7);
+            line-height: bkscale(@font__h1--line-height, 0.7);
+        }
     }
 
     .post-footer p, 
