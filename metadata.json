@@ -197,7 +197,7 @@
             "font__p--letter-spacing" : "@font-swatch5-letter-spacing"
         },
         "feature": {
-            "color__feature-content--background" : "@color-swatch2",
+            "color__feature-content--background" : "transparent",
             "color__feature-headline--text": "@font-swatch8-color",
             "color__feature-strapline--text": "@font-swatch9-color",
             "color__feature-button--text": "@font-swatch7-color",
@@ -213,7 +213,7 @@
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing"
         },
         "navigation": {
-            "color__navigation--background" : "#fff",
+            "color__navigation--background" : "#F5F5F5",
             "color__navigation--text": "@font-swatch6-color",
             "color__navigation--text--selected": "@color-swatch3",
             "color__navigation--text--hover": "@color-swatch3",
@@ -225,7 +225,6 @@
         },
         "button": {
             "color__button--text": "@font-swatch7-color",
-
             "font__button--font-family": "@font-swatch7-font-family",
             "font__button--font-size": "@font-swatch7-font-size",
             "font__button--font-weight": "@font-swatch7-font-weight",
@@ -234,22 +233,11 @@
         },
         "form": {
             "color__form--background" : "#fff",
-            "color__form-legend--text" : "#000"
+            "color__form-legend--text" : "@font-swatch4-color"
         },
         "twitter": {
-            "color__twitter-item--background": "transparent",
             "color__twitter-account-name--text": "@color-swatch4",
             "color__twitter-tweet--text": "@color-swatch4"
-        },
-        "gallery": {
-            "color__gallery-caption--background": "fade(@color-swatch4,50%)",
-            "color__gallery-title--text": "#fff",
-            "color__gallery-description--text": "#fff"
-        },
-        "slideshow": {
-            "color__slideshow-caption--background":  "fade(@color-swatch4,50%)",
-            "color__slideshow-title--text": "#fff",
-            "color__slideshow-description--text": "#fff"
         },
         "blog": {
             "color__blogsearch-legend--text" : "@color__form-legend--text",
@@ -259,9 +247,10 @@
             "color__blogpostlist-article--background" : "transparent"
         },
         "ecommerce": {
-            "color__ecomproductslist-product-item--background": "#fff",
             "color__ecomproduct-title--text": "@color-swatch4",
-            "color__ecomproduct-price--text": "@color-swatch5"
+            "color__ecomproduct-price--text": "@color-swatch5",
+            "color__ecomproductslist-product-title--text" : "@color-swatch4",
+            "color__ecomproductslist-product-price--text" :"@color-swatch5"
         }
     }
 }

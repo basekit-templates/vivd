@@ -89,7 +89,6 @@ button,
 
 
 .feature {
-    background-color: transparent;
     &__headline {
         font-family: @font__feature-headline--font-family;
         color: @color__feature-headline--text;
@@ -115,7 +114,10 @@ button,
 // ---------------
 
 .extendednavigation {
-    // typography
+    .navigation-list.open {
+        background-color: @color__navigation--background;
+    }
+
     .extendednavigation__item-name {
         color: @color__navigation--text;
     }
@@ -127,54 +129,12 @@ button,
 
 
 
-
-// Gallery
-// ---------------
-
-.gallery {
-    .image-title {
-        color: @color__gallery-title--text;
-    }
-    .image-description {
-        color: @color__gallery-description--text;
-    }
-    .caption {
-        background-color: @color__gallery-caption--background;
-    }
-}
-
-
-
-
-// Slideshow
-// ---------------
-
-.responsiveslideshow {
-    .caption {
-        background-color: @color__slideshow-caption--background;
-    }
-    .responsiveslideshow__image-title {
-        color: @color__slideshow-title--text;
-    }
-    .responsiveslideshow__image-description {
-        color: @color__slideshow-description--text;
-    }
-}
-
-
-
-
 // Ecommerce
 // ---------------
 
-.ecomproductslist {
-    .product-item-image {
-        background-color: @color__ecomproductslist-product-item--background;
-    }
-}
-
 .product-item-title.product-item-title,
-.ecomproduct__product-title {
+.ecomproduct__product-title,
+.ecomproductslist__title-link {
     color: @color__ecomproduct-title--text;
 }
 
