@@ -63,9 +63,9 @@
        "title": "Work Sans",
         "font1": {
             "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
-            "font-size": "40px",
+            "font-size": "50px",
             "font-weight": "300",
-            "line-height": "50px",
+            "line-height": "58px",
             "color": "@color-swatch4",
             "letter-spacing": "0px"
         },
