@@ -4,30 +4,25 @@
 
 <div class="bk-pt-home">
 
-    <!-- Container -->
-    <div class="container">
-
-        {% include "includes/header.twig" %}
-
-    </div>
+    {% include "includes/header.twig" %}
 
     <div class="homepage-content"><!-- adds sticky footer -->
 
         <div class="main-content"><!-- adds sticky footer-->
 
-        <div class="feature-wrap">
+            <div class="feature-wrap">
 
-            {{widget('feature', 'featurehome', {
-                "header": "profile",
-                "strapline": "profile",
-                "defaultBgImg": asset('images/feature.jpg'),
-                'positionTopPercentage': '0',
-                'showBtn': true,
-                buttonText: "Lorem Ipsum"
-            })|raw}}
+                {{widget('feature', 'featurehome', {
+                    "header": "profile",
+                    "strapline": "profile",
+                    "defaultBgImg": asset('images/feature.jpg'),
+                    'positionTopPercentage': '0',
+                    'showBtn': true,
+                    buttonText: "Lorem Ipsum"
+                })|raw}}
 
-            <!-- Feature Arrow -->
-            <a href="#main-scroll" class="feature-arrow-link  arrow-bounce"></a>
+                <!-- Feature Arrow -->
+                <a href="#main-scroll" class="feature-arrow-link  arrow-bounce"></a>
 
             </div>
 

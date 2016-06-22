@@ -1,12 +1,12 @@
 // ------------------------------
-// Mono:  widget-all.less
+// Vivid:  Widget-all.less
 // ------------------------------
 
 // -----------------------------
 // #Table of Contents
 // -----------------------------
 
-//  1.   #Template Header
+//  1.   #Template Header + Footer
 //  2.   #Logo & Company Name
 
 //  4.   #Feature
@@ -41,6 +41,8 @@
     width: 100%;
     border-bottom: 1px solid #E6E6E6;
     padding: 20px 0;
+    width: 90%;
+    margin: 0px auto;
 }
 
 .bk-pt-default .template-header {
@@ -207,6 +209,12 @@
 // 3.  #Feature
 // -----------------------------
 
+// Feature Wrap
+// ---------------
+
+.feature-wrap {
+    position: relative;
+}
 
 .feature:after {
     content: "";
@@ -263,7 +271,6 @@
 }
 
 .feature__content-inner-wrap {
-    max-width: 1200px;
     margin: 0 auto;
     width: 90%;
 }
@@ -338,14 +345,10 @@
     background-image: image('/images/down-arrow.png');
     background-repeat: no-repeat;
     position: absolute;
-    opacity: .5;
     z-index: 999;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 90%;
+    width: 80px;
     bottom: 30px;
-    left: 0;
-    right: 0;
+    right: 5%;
     background-position: right;
 }
 
