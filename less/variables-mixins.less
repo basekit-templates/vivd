@@ -1,18 +1,16 @@
 // --------------------------------
-// Mono: variables-mixins.less
+// Vivid: variables-mixins.less
 // --------------------------------
 
-
-
-
+ 
 // -----------------------------
 // Flexbox Mixins
 // -----------------------------
-
-
+ 
+ 
 // Mixins courtesy of jayj https://gist.github.com/jayj/4012969
-
-
+ 
+ 
 // Display Flex
 .flex(@display: flex) {
     display: ~"-webkit-@{display}";
@@ -21,8 +19,8 @@
     display: ~"-ms-@{display}"; // IE11
     display: @display;
 }
-
-
+ 
+ 
 // Vertical Alignment
 // - applies to: multi-line flex containers
 // flex-start | flex-end | center | space-between | space-around | stretch
@@ -32,8 +30,8 @@
       -ms-align-content: @align;
           align-content: @align;
 }
-
-
+ 
+ 
 // Axis Alignment
 // - applies to: flex containers
 // flex-start | flex-end | center | space-between | space-around
@@ -43,8 +41,8 @@
       -ms-justify-content: @justify;
           justify-content: @justify;
 }
-
-
+ 
+ 
 // Cross-axis Alignment
 // - applies to: flex containers
 // flex-start | flex-end | center | baseline | stretch
@@ -54,8 +52,8 @@
       -ms-align-items: @align;
           align-items: @align;
 }
-
-
+ 
+ 
 // Cross-axis Alignment
 // - applies to: flex items
 // auto | flex-start | flex-end | center | baseline | stretch
@@ -65,8 +63,8 @@
       -ms-align-self: @align;
           align-self: @align;
 }
-
-
+ 
+ 
 // Flex Line Wrapping
 // - applies to: flex containers
 // nowrap | wrap | wrap-reverse
@@ -76,8 +74,8 @@
       -ms-flex-wrap: @wrap;
           flex-wrap: @wrap;
 }
-
-
+ 
+ 
 // Flex Flow Direction
 // - applies to: flex containers
 // row | row-reverse | column | column-reverse
@@ -87,8 +85,8 @@
       -ms-flex-direction: @direction;
           flex-direction: @direction;
 }
-
-
+ 
+ 
 // Display Order
 // - applies to: flex items
 // <integer>
@@ -98,9 +96,10 @@
       -ms-order: @order;
           order: @order;
 }
-
-
-
+ 
+ 
+ 
+ 
 
 // -----------------------------
 // Transform
