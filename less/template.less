@@ -75,7 +75,7 @@ p   {
 
 // Anchor links
 a {
-    color: @color__link--text;
+    word-wrap: break-word;
 }
 
 
@@ -218,6 +218,9 @@ body {
 
     .signupform__form-group {
         display: inline-block;
+        @media @mobile {
+            width: 100%;
+        }
     }
 
     .signupform__legend {

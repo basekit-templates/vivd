@@ -58,6 +58,9 @@
         background-color: #ffffff;
         .transition;
     }
+    @media @mobile {
+        padding-top: 20px;
+    }
 }
 
 // Product List Flexbox
@@ -71,6 +74,12 @@
 
     height: 200px;
     padding: 20px;
+
+    @media @mobile {
+        height: 100px;
+        padding: 20px;
+        margin-top: 0;
+    }
 }
 
 .product-item-title {
@@ -420,6 +429,9 @@ button.icon--add.added {
 .product-item-image,
 .basket-item-image {
     margin-bottom: 20px;
+    @media @mobile {
+        margin-bottom: 10px;
+    }
 }
 
 .product-item-image, 
