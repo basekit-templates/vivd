@@ -208,8 +208,24 @@ body {
         margin-top: 10px;
     }
 
+    .signupform__input {
+        border-bottom: 1px solid #d6d6d6;
+        background-color: transparent;
+        &:focus {
+            border-bottom: 1px solid @color-swatch4;
+        }
+    }
+
     .signupform__form-group {
         display: inline-block;
+    }
+
+    .signupform__legend {
+        font-size: 26px;
+    }
+
+    input[type="email"]:focus {
+        border-bottom: 1px solid @color-swatch4;
     }
 
     label {

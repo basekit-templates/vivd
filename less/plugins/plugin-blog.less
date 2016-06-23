@@ -36,8 +36,7 @@
 
         .transition;
         .flex(@display: flex);
-        .justify-content(@justify: space-between);
-        .flex-wrap(@wrap: wrap);
+        .flex-direction(@direction: column);
 
         &:hover {
             background-color: #fff;
@@ -332,6 +331,11 @@
 
             .blogpost .post-content {
                 padding: 30px;
+            }
+
+            .blogpostlist .post-header h2 {
+                font-size: 30px;
+                line-height: 38px;
             }
 
         }

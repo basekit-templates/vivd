@@ -273,6 +273,11 @@
 .feature__content-inner-wrap {
     margin: 0 auto;
     width: 90%;
+    @media @tablet {
+        margin: 0;
+        width: 80%;
+        padding: 0 0 0 5%;
+    }
 }
 
 
@@ -878,7 +883,6 @@ button,
 // 8.  #Forms
 // -----------------------------
 
-
 // Form 
 .form {
     background-color: @color__form--background;
@@ -947,6 +951,24 @@ label {
 }
 
 
+// Placeholder
+.blogsearch__form,
+.signupform__form {
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: transparent;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: transparent;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: transparent;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: transparent;
+    }
+}
+
+
 // Select
 // ----------
 
@@ -978,7 +1000,7 @@ label {
 .select {
     border: none;
     color: @color__p--text;
-    font-size: bkscale(@font__p--font-size, 0.9);
+    font-size: 16px;
     border-radius: 0;
     background-color: transparent;
     -webkit-appearance: none;
@@ -1021,7 +1043,7 @@ textarea,
     -webkit-appearance: none;
     -webkit-border-radius: 0;
     &:focus {
-        border-color: @contrast-color;
+        border-color: @color-swatch4;
         box-shadow: none;
         .transition(@duration:0.2s, @ease:ease-in-out); // Mixin
     }
@@ -1029,8 +1051,14 @@ textarea,
 
 .ecomproductslist__input {
     &:focus {
-        border-color: @contrast-color;!important;
+        border-color: @color-swatch4!important;
+        border-bottom: 1px solid @color-swatch4!important;
     }
+}
+
+input[type="search"]:focus {
+    border-color: @color-swatch4!important;
+    border-bottom: 1px solid @color-swatch4!important;
 }
 
 
@@ -1244,10 +1272,9 @@ hr.rule {
 // -----------------------------
 
 .message {
-    border: 3px solid @contrast-color;
     margin: 20px 0;
     padding: 10px 40px;
-    display: inline-block;
+    display: block;
 
     @media @bp-mobile {
         margin: 30px 0;
