@@ -94,6 +94,10 @@
             }
         }
 
+        .post-excerpt--full {
+            overflow: hidden;
+        }
+
 
 
 
@@ -253,7 +257,9 @@
     }
 
     p {
-        font-size: 16px;
+        @media @mobile {
+            font-size: 16px;
+        }
     }
 
     .post-footer p, 
