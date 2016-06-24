@@ -65,18 +65,10 @@
 
 // Product List Flexbox
 .product-item-details {
-    .flex(@display: flex);
-    .flex-direction(@direction: column); 
-    .flex-wrap(@wrap: nowrap);
-    .justify-content(@justify: center);
-    .align-content(@align: center);
-    .align-items(@align: center);
-
-    height: 200px;
     padding: 20px;
+    display: block;
 
     @media @mobile {
-        display: block;
         height: 100%;
 
     }
