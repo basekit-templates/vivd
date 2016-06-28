@@ -126,7 +126,6 @@
     color: @color__navigation--text;
     @media @tablet {
         border-bottom: 0;
-        padding-bottom: 0;
     }
 }
 
@@ -278,7 +277,7 @@
     .animation;
 
     // Displays as icon's middle bar
-    background-color: @color__p--text;
+    background-color: @color__companyname--text;
     background-clip: content-box;
     width: 60px;
     height: 46px;
@@ -296,6 +295,12 @@
         display: block;
     }
 
+    @media @mobile {
+        float: inherit;
+         text-align: center;
+        margin: 0px auto;
+    }
+
 
     // Top and bottom navigation item bar
 
@@ -306,7 +311,7 @@
         position: absolute;
         left: 20px;
         display: block;
-        background: @color__p--text;
+        background: @color__companyname--text;
         margin-right: 0;
         margin-left: 0;
         -webkit-transition: all 0.25s ease-in-out;
@@ -335,10 +340,10 @@
 
 
     &:hover {
-        background-color: @color__p--text;
+        background-color: @color__companyname--text;
 
         &:after, &:before {
-            background: @color__p--text;
+            background: @color__companyname--text;
         }
     }
 

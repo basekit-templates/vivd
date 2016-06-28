@@ -43,6 +43,9 @@
     padding: 20px 0;
     width: 90%;
     margin: 0px auto;
+    @media @mobile {
+        padding: 0;
+    }
 }
 
 .bk-pt-default .template-header {
@@ -115,6 +118,10 @@
     }
 }
 
+.logo__logo-image {
+    max-width: 400px;
+}
+
 // Header Logo Flexbox
 .header-logo {
     // Flex child
@@ -140,6 +147,11 @@
         padding: 10px 0px;
         display: inline-block;
         vertical-align: middle;
+    }
+
+    @media @mobile {
+        width: 100%;
+        text-align: center;
     }
 
     img, .logo {
@@ -199,6 +211,10 @@
     @media @tablet {
         display: inline-block;
         margin-top: 20px;
+    }
+
+    @media @mobile {
+        text-align: center;
     }
 }
 
@@ -1167,7 +1183,6 @@ input[type="search"]:focus {
     // ----------
     .tweet-list {
         .flex(@display: flex);
-        .justify-content(@justify: space-around);
         .flex-wrap(@wrap: wrap);
         margin-bottom: 20px;
     }
