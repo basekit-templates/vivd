@@ -3,6 +3,46 @@
 // ---------------------------
 
 
+// Home Gallery Styles
+// -----------------------
+
+.homepage-gallery {
+    .gallery .gallery-item {
+        margin-bottom: 0;
+        width: 50%;
+        @media @mobile {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+    }
+    .gallery .image-link {
+        height: 500px;
+    }
+    .gallery-item {
+        height: 500px;
+    }
+    .gallery-list {
+        width: 100%;
+    }
+    .figure:hover .caption {
+        visibility: visible;
+        opacity: 1;
+        background-color: @color__gallery-caption--background;
+        &:after {
+            content: '\f067';
+            font-family: 'FontAwesome', sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline-block;
+            color: white;
+            font-size: 20px;
+            font-weight: 100;
+        }
+    }
+}
+
+
 // Gallery 3 column layout
 // -----------------------
 
@@ -25,7 +65,7 @@
 .gallery .gallery-item {
     position: relative;
     width: 32%;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
     // Display 100% at mobile
     @media @bp-mobile {
         width: 100%;
@@ -36,7 +76,7 @@
 // Gallery item links
 .gallery .image-link {
     display: block;
-    height: 500px;
+    height: 300px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -67,7 +107,7 @@
     bottom: 0;
     display: block;
     width: 100%;
-    @media @mobile {
+    @media @tablet {
         display: none!important;
     }
 }

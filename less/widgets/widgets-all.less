@@ -36,7 +36,7 @@
 .template-header {
     .flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
     min-height: 80px;
-    background-color: @color__body--background;
+    background-color: transparent!important;
     z-index: 99999;
     width: 100%;
     border-bottom: 1px solid #E6E6E6;
@@ -225,6 +225,15 @@
 // 3.  #Feature
 // -----------------------------
 
+
+.widget__feature {
+    margin-bottom: 40px;
+    @media @mobile {
+        margin-bottom: 20px;
+    }
+}
+
+
 // Feature Wrap
 // ---------------
 
@@ -261,11 +270,11 @@
     width: 100%;
     @media @tablet {
         min-height: 400px;
-        height: 550px;
+        height: 400px;
     }
     @media @mobile {
         min-height: 200px;
-        height: 350px;
+        height: 300px;
     }
 }
 
@@ -328,27 +337,18 @@
     }
 }
 
-.feature__headline,
-.feature__strapline {
-    margin-bottom: 20px;
-    @media only screen and (max-width: 1024px) {
-        max-width: 100%;
-    }
-    @media @tablet {
-        margin-bottom: 0;
-    }
-}
-
 
 // Feature Button
 // ---------------
 
 .feature__button {
-    margin: 5px 0 20px 0;
+    margin: 5px 0 10px 0;
     color: @color__feature-button--text;
     float: left;
     z-index: 9999;
     position: relative;
+    max-width: 100%;
+    text-align: left;
 }
 
 
@@ -366,17 +366,23 @@
 
 
 .feature-arrow-link {
-    height: 80px;
+    height: 50px;
     background-image: image('/images/down-arrow.png');
     background-repeat: no-repeat;
     position: absolute;
     z-index: 999;
-    width: 80px;
-    bottom: 30px;
+    width: 50px;
+    bottom: 10px;
     right: 5%;
     background-position: right;
+    background-size: 50px;
     @media @tablet {
-        bottom: 20px;
+        bottom: 15px;
+    }
+    @media @mobile {
+        background-size: 40px;
+        height: 40px;
+        width: 40px;
     }
 }
 
@@ -410,17 +416,18 @@
 
 // Title
 .image-title {
-    font-size: @font__p--font-size;
-    line-height: @font__p--line-height;
+    font-size: bkscale(@font__p--font-size, 0.8);
+    line-height: bkscale(@font__p--line-height, 0.8);
     font-family: @font__p--font-family;
     font-weight: 700;
+    text-transform: uppercase;
     @media @tablet {
-        font-size: bkscale(@font__p--font-size, 0.9);
-        line-height: bkscale(@font__p--line-height, 0.9);
-    }
-    @media @mobile {
         font-size: bkscale(@font__p--font-size, 0.7);
         line-height: bkscale(@font__p--line-height, 0.7);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__p--font-size, 0.6);
+        line-height: bkscale(@font__p--line-height, 0.6);
     }
 }
 
@@ -441,7 +448,7 @@
 .imagewidget {
     .image-title,
     .image-description {
-        color: @font-swatch5-color;
+        color: @color__p--text;
         text-shadow: none;
     }
 }
@@ -453,22 +460,6 @@
 // 5.  #Gallery
 // -----------------------------
 
-// Homepage Gallery
-// ----------------
-
-.homepage-gallery {
-    .gallery .gallery-item {
-        width: 50%;
-        @media @mobile {
-            width: 100%;
-            margin-bottom: 0px;
-        }
-    }
-    .gallery-list {
-        width: 100%;
-    }
-}
-
 
 .gallery {
 
@@ -476,7 +467,7 @@
     // ------------
 
     .gallery-item {
-        height: 500px;
+        height: 300px;
         overflow: hidden;
     }
 
@@ -503,17 +494,6 @@
         visibility: visible;
         opacity: 1;
         background-color: @color__gallery-caption--background;
-        &:after {
-            content: '\f067';
-            font-family: 'FontAwesome', sans-serif;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            display: inline-block;
-            color: white;
-            font-size: 20px;
-            font-weight: 100;
-        }
     }
 
 
@@ -634,6 +614,7 @@
 .responsiveslideshow .figure {
     position: relative;
     min-height: 400px;
+    background-color: #efefef!important;
 }
 
 
@@ -1195,7 +1176,7 @@ input[type="search"]:focus {
         padding: 0px 20px;
         text-align: left;
         @media @tablet {
-            padding: 20px 0px;
+            padding: 10px 0px 0;
         }
     }
 

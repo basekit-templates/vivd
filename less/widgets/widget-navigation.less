@@ -24,6 +24,11 @@
         position: relative;
         right: 0;
     }
+    @media @mobile {
+        -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    }
 }
 
 // Folder Item Parent: Gives arrow
@@ -182,6 +187,9 @@
     &.open {
         overflow: auto;
     }
+    @media @mobile {
+        padding: 150px 70px;
+    }
 }
 
 // Hides navigation until toggled
@@ -296,9 +304,7 @@
     }
 
     @media @mobile {
-        float: inherit;
-         text-align: center;
-        margin: 0px auto;
+        float: right;
     }
 
 
