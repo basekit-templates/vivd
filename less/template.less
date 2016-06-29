@@ -181,6 +181,10 @@ body {
     .social-link {
         display: inline-block;
         font-size: 20px;
+        color: @color__socialicons--icon;
+        &:hover {
+            color: darken(@color__socialicons--icon, 10%)
+        }
     }
 
     .social-item {

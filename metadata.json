@@ -244,6 +244,10 @@
             "color__twitter-tweet--text": "@color-swatch4",
             "color__twitter-item--background" : "#fff"
         },
+        "socialicons": {
+            "color__socialicons--icon": "@color-swatch4",
+            "color__socialicons--text": "@color-swatch4"
+        },
         "gallery": {
             "color__gallery-caption--background": "fade(@color-swatch4,50%)",
             "color__gallery-title--text": "@color-swatch1",
