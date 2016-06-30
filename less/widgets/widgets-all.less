@@ -152,6 +152,7 @@
     @media @mobile {
         width: 100%;
         text-align: center;
+        padding: 10px 0px 0;
     }
 
     img, .logo {
@@ -300,8 +301,8 @@
     width: 90%;
     @media @tablet {
         margin: 0;
-        width: 80%;
-        padding: 0 0 0 5%;
+        width: 100%;
+        padding: 0 5%;
     }
 }
 
@@ -380,9 +381,7 @@
         bottom: 15px;
     }
     @media @mobile {
-        background-size: 40px;
-        height: 40px;
-        width: 40px;
+        display: none;
     }
 }
 
@@ -1001,7 +1000,8 @@ label {
 // Placeholder
 .blogsearch__form,
 .signupform__form,
-.ecomproductslist__form-group {
+.ecomproductslist__form-group,
+.advancedcontactform__form-group {
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
       color: transparent;
     }
@@ -1059,10 +1059,6 @@ label {
     position: relative;
     z-index: 1000;
     border-bottom: 1px solid #ddd;
-
-    @media @bp-global-small {
-        font-size: bkscale(@font__p--font-size, 0.9);
-    }
 
     &:hover, &:focus {
         background-color: transparent;
