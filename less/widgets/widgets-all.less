@@ -227,14 +227,6 @@
 // -----------------------------
 
 
-.widget__feature {
-    margin-bottom: 40px;
-    @media @mobile {
-        margin-bottom: 20px;
-    }
-}
-
-
 // Feature Wrap
 // ---------------
 
@@ -286,7 +278,7 @@
 .feature__content-wrap {
     text-align:center;
     max-width: 80%;
-    padding: 100px 0 0;
+    padding: 100px 0 20px;
     vertical-align: bottom;
     display: table-cell;
     z-index: 999;
@@ -301,6 +293,10 @@
     width: 90%;
     @media @tablet {
         margin: 0;
+        width: 80%;
+        padding: 0 0 0 5%;
+    }
+    @media @tablet {
         width: 100%;
         padding: 0 5%;
     }
@@ -373,13 +369,10 @@
     position: absolute;
     z-index: 999;
     width: 50px;
-    bottom: 10px;
+    bottom: 30px;
     right: 5%;
     background-position: right;
     background-size: 50px;
-    @media @tablet {
-        bottom: 15px;
-    }
     @media @mobile {
         display: none;
     }
@@ -968,6 +961,9 @@ legend {
     letter-spacing: @font__h2--letter-spacing;
     font-weight: @font__h2--font-weight;
     margin-bottom: 20px;
+    @media @mobile {
+        font-size: bkscale(@font__h2--font-size,0.8);
+    }
 }
 
 
@@ -978,6 +974,9 @@ label {
     font-family: @font__p--font-family;
     font-size: @font__p--font-size;
     color: @color__p--text;
+    @media @mobile {
+        font-size: bkscale(@font__p--font-size,0.6);
+    }
 }
 
 .dropbox__label {
