@@ -90,7 +90,7 @@
             margin: 0;
 
             @media @mobile {
-                padding: 0px 20px 0px;
+                padding: 0px 20px 10px;
             }
         }
 
@@ -154,9 +154,7 @@
         }
 
         .read-more {
-            font-size: @font-swatch7-font-size;
-            color: @color__h4--text;
-            font-weight: 400;
+            color: @color__button--text;
         }
 
 
@@ -241,6 +239,9 @@
 
     .post-image .image {
         max-height: 100%;
+        @media @mobile {
+            max-height: 400px;
+        }
     }
 
     .post-header h1 {
