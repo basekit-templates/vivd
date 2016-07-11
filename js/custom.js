@@ -34,6 +34,7 @@ $(document).ready(function() {
 
 });
 
+
 // Makes the whole twitter item clickable
 $(document).ready(function() {
 
@@ -68,4 +69,19 @@ $(document).ready(function() {
 
     });
 
+});
+
+
+// Toggles class open to display/hide the whole navigation
+$( ".navigation-toggle" ).click(function() {
+    $( ".bk-extendednavigation" ).toggleClass( "open" );
+    $( "body, html" ).toggleClass( "noscroll" );
+});
+
+// Toggles class open to display/hide folders
+
+$( ".navigation-item.folder .item-name--parent" ).each(function() {
+    $( this ).click(function() {
+            $( this ).parent( ".navigation-item.folder" ).toggleClass( "open-folder" );
+    });
 });
