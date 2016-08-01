@@ -1,7 +1,7 @@
 {
     "name": "Vivid",
     "thumbnail": "thumbnail.png",
-    "screenshot": "vivid-screenshot-high.jpg",
+    "screenshot": "vivid-screenshot.jpg",
     "widgetVersion":2,
     "pageTypes": ["home"],
     "templateType":"standard",
