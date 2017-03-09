@@ -69,7 +69,7 @@
 {% block scripts %}
 
    <!-- Smooth Scroll -->
-<script>
+<script nonce="{{ numberUsedOnce }}">
     $(document).ready(function(){
 
         $('a[href*=#]').bind('click', function(e) {
