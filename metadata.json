@@ -218,8 +218,8 @@
         "navigation": {
             "color__navigation--background" : "#F5F5F5",
             "color__navigation--text": "@font-swatch6-color",
-            "color__navigation--text--selected": "@color-swatch3",
-            "color__navigation--text--hover": "@color-swatch3",
+            "color__navigation--text--selected": "#313131",
+            "color__navigation--text--hover": "#313131",
             "color__navigation-item--background--hover" : "#FFFFFF",
             "font__navigation--font-family": "@font-swatch6-font-family",
             "font__navigation--font-size": "@font-swatch6-font-size",
