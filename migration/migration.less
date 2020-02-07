@@ -11,7 +11,7 @@
     // -----------------------------
     
     
-    .container {
+    .container:not(.footer-wrapper) {
         width: 100%;
     }
     
@@ -23,11 +23,11 @@
     
     [data-name="row"] .row__container {
         
-        button, 
-        .button, 
+        button:not(.previous-button):not(.next-button):not(.pause-toggle):not(.paypalbuynow__button), 
+        .button:not(.previous-button):not(.next-button):not(.pause-toggle):not(.paypalbuynow__button),
         .blogpostlist__read-more,
-        button:hover, 
-        .button:hover, 
+        button:not(.previous-button):not(.next-button):not(.pause-toggle):not(.paypalbuynow__button):hover, 
+        .button:not(.previous-button):not(.next-button):not(.pause-toggle):not(.paypalbuynow__button):hover, 
         .blogpostlist__read-more:hover {
             padding: 8px 45px 8px 18px;
             
@@ -35,11 +35,36 @@
                 top: 4px;
             }
         }
+        
+        
+        .paypalbuynow__button:after {
+            display: none;
+        }
 
 
         .social-link {
             padding: 8px;
         }
+    }
+
+
+    [data-name="row"] .signupform__form-body {
+        .flex-display;
+        .align-items(center);
+        
+        @media @mobile {
+            display: block;
+        }
+        
+        
+        .form-group:first-child {
+            .flex-grow(1);
+        }
+    }
+    
+    
+    [data-name="row"] .blogpostlist__read-more:after {
+        top: 10px;
     }
     
     
@@ -57,8 +82,7 @@
     .empty-zone,
     #page-zones__main:empty,
     #page-zones__main > .widget:not([data-name="row"]),
-    .row:not(.row--width-no-padding) .row__container,
-    .template-footer {
+    .row:not(.row--width-no-padding) .row__container {
         margin-left: auto;
         margin-right: auto;
         max-width: 100%;
